@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form Elements Vue Component | Framework7 Vue Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/highlight.css">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="//cdn.framework7.io/js/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body><!-- BuySellAds Ad Code -->
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script><!-- End BuySellAds Ad Code -->
+    <header class="inner-header">
+      <div class="center"><a href="../" class="logo"></a>
+        <div class="langs"><span>Language: </span><a href="http://framework7.io">EN</a><a href="http://framework7.cn/">CN</a></div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+        <div class="title-links">
+          <div class="title">Framework7</div>
+          <div class="links-row">
+            <div class="links-label">Project:</div>
+            <div class="links"><a href="https://github.com/nolimits4web/Framework7/releases" target="_blank">Download</a><a href="http://forum.framework7.io">Forum</a><a href="../contribute/">Contribute</a><a href="https://github.com/nolimits4web/Framework7/blob/master/CHANGELOG.md" target="_blank">Changelog</a>
+            </div>
+          </div>
+          <div class="links-row">
+            <div class="links-label">Learn:</div>
+            <div class="links"><a href="../docs/">Docs</a><a href="../vue/" class="active">F7 + Vue</a><a href="../react/">F7 +  React</a><a href="../tutorials/">Tutorials</a>
+            </div>
+          </div>
+          <div class="links-row">
+            <div class="links-label">Apps:</div>
+            <div class="links"><a href="../examples/">Layouts</a><a href="../plugins/">Plugins</a><a href="../apps/">Demo Apps</a><a href="../showcase/">Showcase</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="share-line">
+      <div class="center">
+        <div class="share-buttons">
+          <div class="share-button"><a href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><img src="//cdn.framework7.io/i/support-badge.png" style="height:20px"></a></div>
+          <div class="share-button">
+            <div data-href="http://framework7.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" class="fb-like"></div>
+          </div>
+          <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button"></a></div>
+          <div class="share-button"><a href="https://twitter.com/idangerous" data-show-count="true" class="twitter-follow-button"></a></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="//cdn.framework7.io/i/gh-logo.png"></a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-stars"><span></span> stars</a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-forks"><span></span> forks</a></div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="content center">
+      <div class="docs-wrap">
+        <div class="docs-nav">
+          <ul>
+            <li>
+              <div class="title">开始使用</div>
+              <ul>
+                <li><a href="introduction.html">简介</a></li>
+                <li><a href="installation.html">如何安装</a></li>
+                <li><a href="templates.html">框架模板</a></li>
+                <li><a href="app-layout.html">App 布局</a></li>
+                <li><a href="init-app.html">初始化 App</a></li>
+                <li><a href="navigation-router.html">导航 / 路由器</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Vue 组件</div>
+              <ul>
+                <li><a href="accordion.html">手风琴</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="content-block-title.html">Block Title</a></li>
+                <li><a href="content-block.html">Block / Content Block</a></li>
+                <li><a href="button.html">按钮</a></li>
+                <li><a href="card.html">卡片</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="fab.html">浮动操作按钮</a></li>
+                <li>
+                  <div class="subtitle">表单</div>
+                  <ul>
+                    <li><a href="checkboxes-radios.html">复选框 & 单选框</a></li>
+                    <li><a href="form-elements.html">表单元素</a></li>
+                    <li><a href="smart-select.html">Smart Select</a></li>
+                  </ul>
+                </li>
+                <li><a href="icon.html">图标</a></li>
+                <li><a href="grid.html">栅格 / 栅格布局</a></li>
+                <li>
+                  <div class="subtitle">列表</div>
+                  <ul>
+                    <li><a href="list.html">列表</a></li>
+                    <li><a href="list-item.html">列表项</a></li>
+                    <li><a href="list-button.html">列表按钮</a></li>
+                    <li><a href="accordion-list.html">手风琴列表</a></li>
+                    <li><a href="contacts-list.html">联系人列表</a></li>
+                    <li><a href="sortable-list.html">可排序列表</a></li>
+                    <li><a href="swipeout-list.html">滑动操作列表</a></li>
+                    <li><a href="virtual-list.html">虚拟列表</a></li>
+                  </ul>
+                </li>
+                <li><a href="link.html">链接</a></li>
+                <li><a href="messages.html">消息</a></li>
+                <li><a href="messagebar.html">消息提示</a></li>
+                <li>
+                  <div class="subtitle">模态框</div>
+                  <ul>
+                    <li><a href="action-sheet.html">Action Sheet</a></li>
+                    <li><a href="login-screen.html">登录框</a></li>
+                    <li><a href="picker-modal.html">选择模态框</a></li>
+                    <li><a href="popover.html">Popover</a></li>
+                    <li><a href="popup.html">弹出框</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="subtitle">导航条</div>
+                  <ul>
+                    <li><a href="navbar.html">导航</a></li>
+                    <li><a href="toolbar.html">工具条/页签条</a></li>
+                    <li><a href="subnavbar.html">二级导航</a></li>
+                  </ul>
+                </li>
+                <li><a href="pages.html">页面容器</a></li>
+                <li><a href="page.html">页面</a></li>
+                <li><a href="panel.html">页面容器</a></li>
+                <li><a href="photo-browser.html">图片浏览器</a></li>
+                <li><a href="preloader.html">Preloader / Spinner</a></li>
+                <li><a href="progressbar.html">进度条</a></li>
+                <li><a href="searchbar.html">搜索框</a></li>
+                <li><a href="statusbar.html">状态栏</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="tabs.html">页签</a></li>
+                <li><a href="template7-template.html">Template7 模板</a></li>
+                <li><a href="timeline.html">时间线</a></li>
+                <li><a href="views.html">视图容器</a></li>
+                <li><a href="view.html">视图</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="toggle-docs-nav"><span></span></div>
+        </div>
+        <div class="docs-content">
+          <h1>表单元素 Vue 组件</h1>
+          <p>表单元素允许您创建灵活和美观的表单布局。表单元素只是众所周知的<a href="../docs/list-view.html">列表视图</a>（<b><a href="list.html">列表</a>和<a href="list-item.html">列表项</a> Vue components</b>Vue组件），但扩展名少。</p>
+          <p>查看Framework7的<a href="../docs/form-elements.html">表单元素</a>的外观。</p>
+          <h2>用法示例</h2>
+          <pre><code>&lt;f7-list form&gt;
+  &lt;!-- Text Input --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Name"/&gt;
+  &lt;/f7-list-item&gt;
+  &lt;!-- Password --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="password" placeholder="Password"/&gt;
+  &lt;/f7-list-item&gt;
+  &lt;!-- Select --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Gender&lt;/f7-label&gt;
+    &lt;f7-input type="select"&gt;
+      &lt;option value="1"&gt;Male&lt;/option&gt;
+      &lt;option value="1"&gt;Female&lt;/option&gt;
+    &lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+  &lt;!-- Switch --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Switch&lt;/f7-label&gt;
+    &lt;f7-input type="switch" @change="onChange"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+  &lt;!-- Range --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Range&lt;/f7-label&gt;
+    &lt;f7-input type="range" min="0" max="100" step="1" value="90"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+  &lt;!-- Textarea --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label&gt;Textarea&lt;/f7-label&gt;
+    &lt;f7-input type="textarea" placeholder="Textarea"&gt;&lt;/f7-input&gt;
+  &lt;/f7-list-item&gt;
+&lt;/f7-list&gt;</code></pre>
+          <p>渲染结果:</p>
+          <pre><code>&lt;form class="list-block"&gt;
+  &lt;ul&gt;
+    &lt;!-- Text Input --&gt;
+    &lt;li&gt;
+      &lt;div class="item-content"&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title label"&gt;Name&lt;/div&gt;
+          &lt;div class="item-input"&gt;
+            &lt;input type="text" placeholder="Name"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;!-- Password --&gt;
+    &lt;li&gt;
+      &lt;div class="item-content"&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title label"&gt;Password&lt;/div&gt;
+          &lt;div class="item-input"&gt;
+            &lt;input type="password" placeholder="Password"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;!-- Select --&gt;
+    &lt;li&gt;
+      &lt;div class="item-content"&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title label"&gt;Gender&lt;/div&gt;
+          &lt;div class="item-input"&gt;
+            &lt;select type="select"&gt;
+              &lt;option value="1"&gt;Male&lt;/option&gt;
+              &lt;option value="1"&gt;Female&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;!-- Switch --&gt;
+    &lt;li&gt;
+      &lt;div class="item-content"&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title label"&gt;Switch&lt;/div&gt;
+          &lt;div class="item-input"&gt;
+            &lt;label class="label-switch"&gt;
+              &lt;input type="checkbox" value=""&gt;
+              &lt;div class="checkbox"&gt;&lt;/div&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;!-- Range --&gt;
+    &lt;li&gt;
+      &lt;div class="item-content"&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title label"&gt;Range&lt;/div&gt;
+          &lt;div class="item-input"&gt;
+            &lt;div class="range-slider"&gt;
+              &lt;input type="range" max="100" min="0" step="1"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;!-- Textarea --&gt;
+    &lt;li&gt;
+      &lt;div class="item-content"&gt;
+        &lt;div class="item-inner"&gt;
+          &lt;div class="item-title label"&gt;Textarea&lt;/div&gt;
+          &lt;div class="item-input"&gt;
+            &lt;textarea type="textarea" placeholder="Textarea"&gt;&lt;/textarea&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/form&gt;</code></pre>
+          <h4>浮动标签（仅限Material主题）</h4>
+          <pre><code>&lt;f7-list form&gt;
+  &lt;!-- Text Input --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label floating&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Name"/&gt;
+  &lt;/f7-list-item&gt;
+  &lt;!-- Password --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-label floating&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="password" placeholder="Password"/&gt;
+  &lt;/f7-list-item&gt;
+  ...
+&lt;/f7-list&gt;</code></pre>
+          <h4>没有标签</h4>
+          <pre><code>&lt;f7-list form&gt;
+  &lt;!-- Text Input --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="text" placeholder="Name"/&gt;
+  &lt;/f7-list-item&gt;
+  &lt;!-- Password --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-input type="password" placeholder="Password"/&gt;
+  &lt;/f7-list-item&gt;
+  ...
+&lt;/f7-list&gt;</code></pre>
+          <h4>有标签和图标</h4>
+          <pre><code>&lt;f7-list form&gt;
+  &lt;!-- Text Input --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-icon slot="media" f7="person"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label floating&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="text" placeholder="Name"/&gt;
+  &lt;/f7-list-item&gt;
+  &lt;!-- Password --&gt;
+  &lt;f7-list-item&gt;
+    &lt;f7-icon slot="media" f7="lock"&gt;&lt;/f7-icon&gt;
+    &lt;f7-label floating&gt;Name&lt;/f7-label&gt;
+    &lt;f7-input type="password" placeholder="Password"/&gt;
+  &lt;/f7-list-item&gt;
+  ...
+&lt;/f7-list&gt;</code></pre>
+          <h2>属性</h2>
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>属性</th>
+                <th>类型</th>
+                <th>默认值</th>
+                <th>说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="4">&lt;f7-label&gt; 属性</th>
+              </tr>
+              <tr>
+                <td>floating</td>
+                <td>boolean</td>
+                <td></td>
+                <td>Enables floating label (affects Material theme only)</td>
+              </tr>
+              <tr>
+                <th colspan="4">&lt;f7-input&gt; 属性</th>
+              </tr>
+              <tr>
+                <td>type</td>
+                <td>string</td>
+                <td></td>
+                <td>Input type. All default HTML5 input type, and few special ones:
+                  <ul>
+                    <li><b>textarea</b> - to render textarea element</li>
+                    <li><b>select</b> - to render select element</li>
+                    <li><b>range</b> - to render range slider</li>
+                    <li><b>switch</b> - to render switch element</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>resizable</td>
+                <td>boolean</td>
+                <td></td>
+                <td>Makes textarea resizable</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td></td>
+                <td>Input name</td>
+              </tr>
+              <tr>
+                <td>placeholder</td>
+                <td>string</td>
+                <td></td>
+                <td>Input placeholder</td>
+              </tr>
+              <tr>
+                <td>id</td>
+                <td>string</td>
+                <td></td>
+                <td>Input ID attribute</td>
+              </tr>
+              <tr>
+                <td>value</td>
+                <td>string/number</td>
+                <td></td>
+                <td>Input value</td>
+              </tr>
+              <tr>
+                <td>size/number</td>
+                <td>string</td>
+                <td></td>
+                <td>Value of input's native "size" attribute</td>
+              </tr>
+              <tr>
+                <td>pattern</td>
+                <td>string</td>
+                <td></td>
+                <td>Value of input's native "pattern" attribute</td>
+              </tr>
+              <tr>
+                <td>accept</td>
+                <td>string/number</td>
+                <td></td>
+                <td>Value of input's native "accept" attribute</td>
+              </tr>
+              <tr>
+                <td>autocomplete</td>
+                <td>string</td>
+                <td></td>
+                <td>Value of input's native "autocomplete" attribute</td>
+              </tr>
+              <tr>
+                <td>autofocus</td>
+                <td>boolean</td>
+                <td></td>
+                <td>Value of input's native "autofocus" attribute</td>
+              </tr>
+              <tr>
+                <td>autosave</td>
+                <td>string</td>
+                <td></td>
+                <td>Value of input's native "autosave" atribute</td>
+              </tr>
+              <tr>
+                <td>checked</td>
+                <td>boolean</td>
+                <td></td>
+                <td>Marks input as checked</td>
+              </tr>
+              <tr>
+                <td>disabled</td>
+                <td>boolean</td>
+                <td></td>
+                <td>Marks input as disabled</td>
+              </tr>
+              <tr>
+                <td>max</td>
+                <td>string/number</td>
+                <td></td>
+                <td>Value of input's native "max" atribute</td>
+              </tr>
+              <tr>
+                <td>min</td>
+                <td>string/number</td>
+                <td></td>
+                <td>Value of input's native "min" atribute</td>
+              </tr>
+              <tr>
+                <td>step</td>
+                <td>string/number</td>
+                <td></td>
+                <td>Value of input's native "step" atribute</td>
+              </tr>
+              <tr>
+                <td>maxlength</td>
+                <td>string/number</td>
+                <td></td>
+                <td>Value of input's native "maxlength" atribute</td>
+              </tr>
+              <tr>
+                <td>minlength</td>
+                <td>string/number</td>
+                <td></td>
+                <td>Value of input's native "minlength" atribute</td>
+              </tr>
+              <tr>
+                <td>multiple</td>
+                <td>boolean</td>
+                <td></td>
+                <td>Value of input's native "multiple" atribute</td>
+              </tr>
+              <tr>
+                <td>readonly</td>
+                <td>boolean</td>
+                <td></td>
+                <td>Marks input as readonly</td>
+              </tr>
+              <tr>
+                <td>required</td>
+                <td>boolean</td>
+                <td></td>
+                <td>Marks input as required</td>
+              </tr>
+              <tr>
+                <td>inputStyle</td>
+                <td>string</td>
+                <td></td>
+                <td>Value if input's "style" attribute</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>string</td>
+                <td></td>
+                <td>Input color. One of <a href="../docs/color-themes.html">default colors</a></td>
+              </tr>
+              <tr>
+                <td>wrap</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Defines should the input be wraped with "item-input" element or not</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>事件</h2>
+          <table class="events-table">
+            <thead>
+              <tr>
+                <th>事件</th>
+                <th>说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="3">&lt;f7-input&gt; events</th>
+              </tr>
+              <tr>
+                <td>focus</td>
+                <td>Fired when user focused to input.</td>
+              </tr>
+              <tr>
+                <td>focusin</td>
+                <td>Fired when an element is about to receive focus. The main difference between this event and focus is that the latter doesn't bubble.</td>
+              </tr>
+              <tr>
+                <td>blur</td>
+                <td>Fired when user lost focus from input.</td>
+              </tr>
+              <tr>
+                <td>focusout</td>
+                <td>Fired when an element is about to lose focus. The main difference between this event and blur is that the latter doesn't bubble.</td>
+              </tr>
+              <tr>
+                <td>beforeinput</td>
+                <td>Fired before input value change.</td>
+              </tr>
+              <tr>
+                <td>input</td>
+                <td>Fired immediately when input value changed. Note: Input event triggers after beforeinput, keypress, keyup, keydown events.</td>
+              </tr>
+              <tr>
+                <td>change</td>
+                <td>Fired when blur if value changed.</td>
+              </tr>
+              <tr>
+                <td>keypress</td>
+                <td>You can use this event and @keydown event for prevent input. @keypress event fired after keydown and before keyup.
+                  <p>You can use like this too:<code class="js">@keypress.enter="alert('User pressed enter key.')"</code></p>
+                  <p>For more information:<a target="_blank" href="https://vuejs.org/v2/guide/events.html#Key-Modifiers">https://vuejs.org/v2/guide/events.html#Key-Modifiers</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td>keyup</td>
+                <td>Fired when user released the keyboard button.</td>
+              </tr>
+              <tr>
+                <td>keydown</td>
+                <td>Fired when user starts pressing to the keyboard button.</td>
+              </tr>
+              <tr>
+                <td>compositionstart</td>
+                <td>Fired when the composition of a passage of text is prepared (similar to keydown for a keyboard input, but fires with special characters that require a sequence of keys and other inputs such as speech recognition or word suggestion on mobile).</td>
+              </tr>
+              <tr>
+                <td>compositionupdate</td>
+                <td>Fired when a character is added to a passage of text being composed (fires with special characters that require a sequence of keys and other inputs such as speech recognition or word suggestion on mobile).</td>
+              </tr>
+              <tr>
+                <td>compositionend</td>
+                <td>Fired when the composition of a passage of text has been completed or cancelled.</td>
+              </tr>
+              <tr>
+                <td>click</td>
+                <td>Fired when clicked to input.</td>
+              </tr>
+              <tr>
+                <td>dblclick</td>
+                <td>Fired when double clicked to input.</td>
+              </tr>
+              <tr>
+                <td>mousedown</td>
+                <td>Fired when a pointing device button (usually a mouse button) is pressed on an element.</td>
+              </tr>
+              <tr>
+                <td>mouseup</td>
+                <td>Fired when a pointing device button (usually a mouse button) is released over an element.</td>
+              </tr>
+              <tr>
+                <td>mouseenter</td>
+                <td>Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
+                  <p>@mouseenter and @mouseover events are different. For more info:<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseenter">https://developer.mozilla.org/en-US/docs/Web/Events/mouseenter</a></p>
+                </td>
+              </tr>
+              <tr>
+                <td>mouseover</td>
+                <td>Fired when a pointing device is moved onto the element that has the listener attached or onto one of its children.</td>
+              </tr>
+              <tr>
+                <td>mouseleave</td>
+                <td>Fired when a pointing device (usually a mouse) is moved off the element that has the listener attached.</td>
+              </tr>
+              <tr>
+                <td>mouseout</td>
+                <td>Fired when a pointing device (usually a mouse) is moved off the element that has the listener attached or off one of its children. Note that it is also triggered on the parent when you move onto a child element, since you move out of the visible space of the parent.</td>
+              </tr>
+              <tr>
+                <td>mousemove</td>
+                <td>Fired when a pointing device (usually a mouse) is moved while over an element.</td>
+              </tr>
+              <tr>
+                <td>wheel</td>
+                <td>Fired when a wheel button of a pointing device (usually a mouse) is rotated. This event replaces the non-standard deprecated mousewheel event.</td>
+              </tr>
+              <tr>
+                <td>select</td>
+                <td>Fired when some text is being selected. The event might not be available for all elements in all languages. For example, select events can be dispatched only on form input and textarea elements.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="share-line">
+      <div class="center">
+        <div class="share-buttons">
+          <div class="share-button"><a href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><img src="//cdn.framework7.io/i/support-badge.png" style="height:20px"></a></div>
+          <div class="share-button">
+            <div data-href="http://framework7.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" class="fb-like"></div>
+          </div>
+          <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button"></a></div>
+          <div class="share-button"><a href="https://twitter.com/idangerous" data-show-count="true" class="twitter-follow-button"></a></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="//cdn.framework7.io/i/gh-logo.png"></a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-stars"><span></span> stars</a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-forks"><span></span> forks</a></div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="center">
+        <div class="links">
+          <div class="links-block">
+            <div class="links-block-title">Project</div>
+            <ul>
+              <li><a href="https://github.com/nolimits4web/Framework7/releases" target="_blank">Download</a></li>
+              <li><a href="/contribute/">Contribute</a></li>
+              <li><a href="/donate/">Donate</a></li>
+              <li><a href="https://github.com/nolimits4web/Framework7/blob/master/CHANGELOG.md" target="_blank">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <div class="links-block-title">Learn</div>
+            <ul>
+              <li><a href="/get-started/">Get Started</a></li>
+              <li><a href="/docs/">Docs</a></li>
+              <li><a href="/tutorials/">Tutorials</a></li>
+              <li><a href="http://forum.framework7.io" target="_blank">Forum</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <div class="links-block-title">Apps</div>
+            <ul>
+              <li><a href="/examples/">Layouts</a></li>
+              <li><a href="/plugins/">Plugins</a></li>
+              <li><a href="/apps/">Demo Apps</a></li>
+              <li><a href="/showcase/">Showcase</a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="sponsors">
+          <div class="sponsors-title">Sponsored by</div>
+          <div id="bsap_1306028" class="bsarocks bsap_692e54a1f79f00fb913f5a1c3ec9eaa5"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="copy">
+          <div class="copy-left">
+            <p>Code licensed under <a href="https://github.com/nolimits4web/Framework7/blob/master/LICENSE" target="_blank">MIT</a></p>
+            <p>2016 © Framework7 is brought to you by <a href="https://twitter.com/nolimits4web" target="_blank">Vladimir Kharlampidi</a> from <a href="http://idangero.us">iDangero.us</a>. </p>
+          </div>
+          <div class="copy-right">
+            <p>Proudly supported by <a href="https://www.keycdn.com/" class="keycdn-link" target="_blank"><img src="//cdn.framework7.io/i/keycdn-logo.svg" alt="KeyCDN" title="KeyCDN" class="keycdn-logo"></a></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </footer>
+    <script src="//cdn.framework7.io/js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="//cdn.framework7.io/js/plugins.js"></script>
+    <script src="//cdn.framework7.io/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Navigation Router | Framework7 Vue Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/highlight.css">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="//cdn.framework7.io/js/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body><!-- BuySellAds Ad Code -->
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script><!-- End BuySellAds Ad Code -->
+    <header class="inner-header">
+      <div class="center"><a href="../" class="logo"></a>
+        <div class="langs"><span>Language: </span><a href="http://framework7.io">EN</a><a href="http://framework7.cn/">CN</a></div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+        <div class="title-links">
+          <div class="title">Framework7</div>
+          <div class="links-row">
+            <div class="links-label">Project:</div>
+            <div class="links"><a href="https://github.com/nolimits4web/Framework7/releases" target="_blank">Download</a><a href="http://forum.framework7.io">Forum</a><a href="../contribute/">Contribute</a><a href="https://github.com/nolimits4web/Framework7/blob/master/CHANGELOG.md" target="_blank">Changelog</a>
+            </div>
+          </div>
+          <div class="links-row">
+            <div class="links-label">Learn:</div>
+            <div class="links"><a href="../docs/">Docs</a><a href="../vue/" class="active">F7 + Vue</a><a href="../react/">F7 +  React</a><a href="../tutorials/">Tutorials</a>
+            </div>
+          </div>
+          <div class="links-row">
+            <div class="links-label">Apps:</div>
+            <div class="links"><a href="../examples/">Layouts</a><a href="../plugins/">Plugins</a><a href="../apps/">Demo Apps</a><a href="../showcase/">Showcase</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="share-line">
+      <div class="center">
+        <div class="share-buttons">
+          <div class="share-button"><a href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><img src="//cdn.framework7.io/i/support-badge.png" style="height:20px"></a></div>
+          <div class="share-button">
+            <div data-href="http://framework7.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" class="fb-like"></div>
+          </div>
+          <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button"></a></div>
+          <div class="share-button"><a href="https://twitter.com/idangerous" data-show-count="true" class="twitter-follow-button"></a></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="//cdn.framework7.io/i/gh-logo.png"></a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-stars"><span></span> stars</a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-forks"><span></span> forks</a></div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="content center">
+      <div class="docs-wrap">
+        <div class="docs-nav">
+          <ul>
+            <li>
+              <div class="title">开始使用</div>
+              <ul>
+                <li><a href="introduction.html">简介</a></li>
+                <li><a href="installation.html">如何安装</a></li>
+                <li><a href="templates.html">框架模板</a></li>
+                <li><a href="app-layout.html">App 布局</a></li>
+                <li><a href="init-app.html">初始化 App</a></li>
+                <li><a href="navigation-router.html">导航 / 路由器</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Vue 组件</div>
+              <ul>
+                <li><a href="accordion.html">手风琴</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="content-block-title.html">Block Title</a></li>
+                <li><a href="content-block.html">Block / Content Block</a></li>
+                <li><a href="button.html">按钮</a></li>
+                <li><a href="card.html">卡片</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="fab.html">浮动操作按钮</a></li>
+                <li>
+                  <div class="subtitle">表单</div>
+                  <ul>
+                    <li><a href="checkboxes-radios.html">复选框 & 单选框</a></li>
+                    <li><a href="form-elements.html">表单元素</a></li>
+                    <li><a href="smart-select.html">Smart Select</a></li>
+                  </ul>
+                </li>
+                <li><a href="icon.html">图标</a></li>
+                <li><a href="grid.html">栅格 / 栅格布局</a></li>
+                <li>
+                  <div class="subtitle">列表</div>
+                  <ul>
+                    <li><a href="list.html">列表</a></li>
+                    <li><a href="list-item.html">列表项</a></li>
+                    <li><a href="list-button.html">列表按钮</a></li>
+                    <li><a href="accordion-list.html">手风琴列表</a></li>
+                    <li><a href="contacts-list.html">联系人列表</a></li>
+                    <li><a href="sortable-list.html">可排序列表</a></li>
+                    <li><a href="swipeout-list.html">滑动操作列表</a></li>
+                    <li><a href="virtual-list.html">虚拟列表</a></li>
+                  </ul>
+                </li>
+                <li><a href="link.html">链接</a></li>
+                <li><a href="messages.html">消息</a></li>
+                <li><a href="messagebar.html">消息提示</a></li>
+                <li>
+                  <div class="subtitle">模态框</div>
+                  <ul>
+                    <li><a href="action-sheet.html">Action Sheet</a></li>
+                    <li><a href="login-screen.html">登录框</a></li>
+                    <li><a href="picker-modal.html">选择模态框</a></li>
+                    <li><a href="popover.html">Popover</a></li>
+                    <li><a href="popup.html">弹出框</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="subtitle">导航条</div>
+                  <ul>
+                    <li><a href="navbar.html">导航</a></li>
+                    <li><a href="toolbar.html">工具条/页签条</a></li>
+                    <li><a href="subnavbar.html">二级导航</a></li>
+                  </ul>
+                </li>
+                <li><a href="pages.html">页面容器</a></li>
+                <li><a href="page.html">页面</a></li>
+                <li><a href="panel.html">页面容器</a></li>
+                <li><a href="photo-browser.html">图片浏览器</a></li>
+                <li><a href="preloader.html">Preloader / Spinner</a></li>
+                <li><a href="progressbar.html">进度条</a></li>
+                <li><a href="searchbar.html">搜索框</a></li>
+                <li><a href="statusbar.html">状态栏</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="tabs.html">页签</a></li>
+                <li><a href="template7-template.html">Template7 模板</a></li>
+                <li><a href="timeline.html">时间线</a></li>
+                <li><a href="views.html">视图容器</a></li>
+                <li><a href="view.html">视图</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="toggle-docs-nav"><span></span></div>
+        </div>
+        <div class="docs-content">
+          <h1>Navigation Router</h1>
+          <p>With Framework7 & Vue.js, we are already composing our application with components. All we need to do is map our components to the routes. Here's a basic example:</p>
+          <pre><code>&lt;!-- Current View/Router --&gt;
+&lt;f7-view&gt;
+  &lt;!-- All pages are rendered inside of Pages --&gt;
+  &lt;f7-pages&gt;
+    &lt;!-- Initial Page --&gt;
+    &lt;f7-page&gt;
+      ...
+      &lt;f7-link href="/about/"&gt;About App&lt;/f7-link&gt;
+      &lt;f7-link href="/login/"&gt;Login&lt;/f7-link&gt;
+    &lt;/f7-page&gt;
+  &lt;/f7-pages&gt;
+&lt;/f7-view&gt;</code></pre>
+          <p>Now we need to map components to routes. It should be done in <b>routes</b> parameter on <a href="init-app.html">App Initialization</a></p>
+          <pre><code>// Create Component for About page
+Vue.component('page-about', {
+    template: '&lt;f7-page name="about"&gt;...&lt;/f7-page&gt;'
+})
+// Create Component for Login page
+Vue.component('page-login', {
+    template: '&lt;f7-page name="login"&gt;...&lt;/f7-page&gt;'
+})
+
+// Init App
+new Vue({
+    el: '#app',
+    framework7: {
+        root: '#app',
+        // Map routes
+        routes: [
+            {
+                path: '/about/',
+                component: 'page-about'
+            },
+            {
+                path: '/login/',
+                component: 'page-login'
+            }
+        ]
+    }
+})</code></pre>
+          <p>If you use single file components (with Webpack or Browserify):</p>
+          <pre><code>&lt;!-- about.vue --&gt;
+&lt;template&gt;
+  &lt;f7-page name="about"&gt;
+    &lt;!-- Page content --&gt;
+  &lt;/f7-page&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  export default {}
+&lt;/script&gt;
+
+&lt;!-- login.vue --&gt;
+&lt;template&gt;
+  &lt;f7-page name="login"&gt;
+    &lt;!-- Page content --&gt;
+  &lt;/f7-page&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  export default {}
+&lt;/script&gt;</code></pre>
+          <pre><code>import AboutPage from 'about.vue'
+import LoginPage from 'login.vue'
+
+// Init App
+new Vue({
+    el: '#app',
+    framework7: {
+        root: '#app',
+        // Map routes
+        routes: [
+            {
+                path: '/about/',
+                component: AboutPage
+            },
+            {
+                path: '/login/',
+                component: LoginPage
+            }
+        ]
+    }
+})</code></pre>
+          <div class="important-note">
+            <ul>
+              <li>
+                <p>Note that route components are intended to load <a href="page.html">Page</a> components only. If you want to load other components in a route, they must be added as <a href="#nested-routes">nested routes</a> within a page route.</p>
+              </li>
+              <li>
+                <p>All pages are rendered inside of the <a href="pages.html">Pages</a> component of the current (or specified) <a href="view.html">View</a></p>
+              </li>
+              <li>
+                <p>Only one Pages component is allowed inside of one View</p>
+              </li>
+              <li>
+                <p>You may have as many Views as required (e.g. in Popup, in Side Panels)</p>
+              </li>
+            </ul>
+          </div>
+          <h2>Dynamic Route Matching</h2>
+          <p>Very often we will need to map routes with the given pattern to the same component. In specified <b>routes</b> we can use a dynamic segment in the path to achieve that.</p>
+          <P>Let's say we have the following link:</P>
+          <pre><code>&lt;f7-link href="/user/45/posts/28/?sort=first#opened"&gt;Read More&lt;/f7-link&gt;</code></pre>
+          <p>And the following pattern in specified route path:</p>
+          <pre><code>import PostPage from 'post.vue'
+
+// Init App
+new Vue({
+    el: '#app',
+    framework7: {
+        root: '#app',
+        // Map routes
+        routes: [
+            {
+                // We can use pattern here:
+                path: '/user/:userId/posts/:postId',
+                component: PostPage
+            }
+        ]
+    }
+})</code></pre>
+          <p>In this case we have access to <b>$route</b> component property that we can use, e.g. in post.vue:</p>
+          <pre><code>&lt;!-- post.vue --&gt;
+&lt;template&gt;
+  &lt;f7-page&gt;
+    &lt;f7-navbar title="Post"&gt;&lt;/f7-navbar&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Route: {{$route.route}}&lt;/li&gt;
+      &lt;li&gt;Url: {{$route.url}}&lt;/li&gt;
+      &lt;li&gt;Path: {{$route.path}}&lt;/li&gt;
+      &lt;li&gt;User ID: {{$route.params.userId}}&lt;/li&gt;
+      &lt;li&gt;Post ID: {{$route.params.postId}}&lt;/li&gt;
+      &lt;li&gt;Query: {{JSON.stringify($route.query)}}&lt;/li&gt;
+      &lt;li&gt;Hash: {{$route.hash}}
+    &lt;/ul&gt;
+    &lt;!-- $route.params are also passed as component props: --&gt;
+    &lt;p&gt;User ID: {{userId}}&lt;/p&gt;
+    &lt;p&gt;Post ID: {{postId}}&lt;/p&gt;
+  &lt;/f7-page&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  &lt;!-- $route.params are also passed as component props: --&gt;
+  export default {
+    props: ['userId', 'postId']
+  }
+&lt;/script&gt;</code></pre>
+          <p>And the output will be:</p>
+          <pre><code>...
+&lt;ul&gt;
+  &lt;li&gt;Route: /user/:userId/posts/:postId&lt;/li&gt;
+  &lt;li&gt;Url: /user/45/posts/28/?sort=first#opened&lt;/li&gt;
+  &lt;li&gt;Path: /user/45/posts/28/&lt;/li&gt;
+  &lt;li&gt;User ID: 45&lt;/li&gt;
+  &lt;li&gt;Post ID: 28&lt;/li&gt;
+  &lt;li&gt;Query: {"sort":"first"}&lt;/li&gt;
+  &lt;li&gt;Hash: opened&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;User ID: 45&lt;/p&gt;
+&lt;p&gt;Post ID: 28&lt;/p&gt;
+...</code></pre>
+          <p><b>$route</b> has the following 属性:</p>
+          <table class="methods-table">
+            <tbody>
+              <tr>
+                <td>$route.url</td>
+                <td>Url of the loaded route/page</td>
+              </tr>
+              <tr>
+                <td>$route.params</td>
+                <td>Object with route parameters (e.g. userId and postId in the example above)</td>
+              </tr>
+              <tr>
+                <td>$route.hash</td>
+                <td>Route hash</td>
+              </tr>
+              <tr>
+                <td>$route.query</td>
+                <td>Parsed query object</td>
+              </tr>
+              <tr>
+                <td>$route.path</td>
+                <td>Route path (same as <b>$route.url</b> but without query and hash)</td>
+              </tr>
+              <tr>
+                <td>$route.route</td>
+                <td>Matched route from specified <b>routes</b> parameter</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Nested Routes</h2>
+          <p>Child components within a page can be controlled via routes. Currently, this is only supported for tabs, but other components may be added in the future.</p>
+          <h4>Tabs</h4>
+          <p>The child components that render within a tab on a page can be controlled via routes. For example, consider these Vue components:</p>
+          <pre><code>&lt;!-- Tabs.vue --&gt;
+&lt;template&gt;
+  &lt;f7-page with-subnavbar&gt;
+    &lt;f7-navbar back-link="Back" title="Tab Routes" sliding&gt;
+      &lt;f7-subnavbar sliding&gt;
+        &lt;f7-buttons&gt;
+          &lt;f7-button route-tab-link="#tab1" href="/tabs/"&gt;Tab 1&lt;/f7-button&gt;
+          &lt;f7-button route-tab-link="#tab2" href="/tabs/tab-2/"&gt;Tab 2&lt;/f7-button&gt;
+          &lt;f7-button route-tab-link="#tab3" href="/tabs/tab-3/"&gt;Tab 3&lt;/f7-button&gt;
+        &lt;/f7-buttons&gt;
+      &lt;/f7-subnavbar&gt;
+    &lt;/f7-navbar&gt;
+
+    &lt;f7-tabs&gt;
+      &lt;f7-tab route-tab-id="tab1" /&gt;
+      &lt;f7-tab route-tab-id="tab2" /&gt;
+      &lt;f7-tab route-tab-id="tab3" /&gt;
+    &lt;/f7-tabs&gt;
+  &lt;/f7-page&gt;
+&lt;/template&gt;
+
+&lt;!-- Tab1Content.vue --&gt;
+&lt;template&gt;
+    &lt;p&gt;Tab 1 Content&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;!-- Tab2Content.vue --&gt;
+&lt;template&gt;
+    &lt;p&gt;Tab 2 Content&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;!-- Tab3Content.vue --&gt;
+&lt;template&gt;
+    &lt;p&gt;Tab 3 Content&lt;/p&gt;
+&lt;/template&gt;
+</code></pre>
+          <p>With the route definitions below, the URL can control which tab content component gets rendered:</p>
+          <pre><code>var routes = [
+  ...
+  {
+    path: '/tabs/',
+    component: Tabs,
+    tabs: [
+      {
+        path: '/',
+        tabId: 'tab1',
+        component: Tab1Content
+      },
+      {
+        path: '/tab-2/',
+        tabId: 'tab2',
+        component: Tab2Content
+      },
+      {
+        path: '/tab-3/',
+        tabId: 'tab3',
+        component: Tab3Content
+      }
+    ]
+  }
+  ...
+];</code></pre>
+          <p>Here are the results for different URL paths beneath the Tabs page URL:</p>
+          <table class="methods-table">
+            <thead>
+              <tr>
+                <th>Url</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>/tabs/</td>
+                <td>Go to the tabs page (or stay on it if already there), show tab 1 as the selected tab f7-button, have the Tab1Content component rendered within the tab1 f7-tab, and make that the visible tab.</td>
+              </tr>
+              <tr>
+                <td>/tabs/tab-2/</td>
+                <td>Go to the tabs page (or stay on it if already there), show tab 2 as the selected tab f7-button, have the Tab1Content component rendered within the tab2 f7-tab, and make that the visible tab.</td>
+              </tr>
+              <tr>
+                <td>/tabs/tab-3/</td>
+                <td>Go to the tabs page (or stay on it if already there), show tab 2 as the selected tab f7-button, have the Tab1Content component rendered within the tab3 f7-tab, and make that the visible tab.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>It is also possible to have multiple child routes for a tab route:</p>
+          <pre><code>var routes = [
+  ...
+  {
+    path: '/tabs/',
+    component: Tabs,
+    tabs: [
+      {
+        path: '/',
+        tabId: 'tab1',
+        component: Tab1Content
+      },
+      {
+        path: '/tab-2/',
+        tabId: 'tab2',
+        component: Tab2Content
+      },
+      {
+        path: '/tab-3/',
+        tabId: 'tab3',
+        routes: [
+          {
+            path: '/',
+            component: Tab3Content
+          },
+          {
+            path: '/tab3-alternate-content/',
+            component: Tab3AlternateContent
+          }
+        ]
+      }
+    ]
+  }
+  ...
+];</code></pre>
+          <p>Here are the results for URL paths that target the different child routes of the tab3 route:</p>
+          <table class="methods-table">
+            <thead>
+              <tr>
+                <th>Url</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>/tabs/tab3/</td>
+                <td>Go to the tabs page and show the tab 3 as the selected tab and have the Tab3Content component rendered within it.</td>
+              </tr>
+              <tr>
+                <td>/tabs/tab-3/tab-3-alternate-content/</td>
+                <td>Go to the tabs page and show tab 3 as the selected tab and have the Tab3AlternateContent component rendered within it. If already on the tabs page with different tab content showing, replace the current tab3 content with Tab3AlternateContent.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Tab routes are also supported on Tabbars:</p>
+          <pre><code>&lt;!-- Tabbar.vue --&gt;
+&lt;template&gt;
+  &lt;f7-page tabbar-fixed&gt;
+    &lt;f7-navbar back-link="Back" title="Tabbar Routes" sliding&gt;&lt;/f7-navbar&gt;
+
+    &lt;f7-block tabs&gt;
+      &lt;f7-tab route-tab-id="tab1" /&gt;
+      &lt;f7-tab route-tab-id="tab2" /&gt;
+      &lt;f7-tab route-tab-id="tab3" /&gt;
+    &lt;/f7-block&gt;
+
+    &lt;f7-toolbar tabbar labels&gt;
+      &lt;f7-link href="/tabbar/" route-tab-link="#tab1" text="Tab 1"&gt;&lt;/f7-link&gt;
+      &lt;f7-link href="/tabbar/tab-2/" route-tab-link="#tab2" text="Tab 2"&gt;&lt;/f7-link&gt;
+      &lt;f7-link href="/tabbar/tab-3/" route-tab-link="#tab3" text="Tab 3"&gt;&lt;/f7-link&gt;
+    &lt;/f7-toolbar&gt;
+
+  &lt;/f7-page&gt;
+&lt;/template&gt;</code></pre>
+          <h2>Router API</h2>
+          <p>To access router instance and use <a href="../docs/router-api.html">Router API</a> you can use special <b>$router</b> property of component:</p>
+          <pre><code>&lt;f7-link @click="$router.load({url: '/about/'})"&gt;About&lt;/f7-link&gt;
+&lt;f7-link @click="$router.back()"&gt;Go Back&lt;/f7-link&gt;</code></pre>
+          <div class="important-note">
+            <p>Please note, that <b>$route</b> and <b>$router</b> component properties are only available inside of custom page components (and their child components) that you load according to routes. In parent components (like in View, or where you init your Vue app instance) they are not accessible as your app may have few routers (Views) at a time. So in this case use access to initialized <a href="view.html#access-to-initialized-instance">View Instance</a>, e.g. <code>$f7.views.main.router</code> or <code>$f7.mainView.router</code></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="share-line">
+      <div class="center">
+        <div class="share-buttons">
+          <div class="share-button"><a href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><img src="//cdn.framework7.io/i/support-badge.png" style="height:20px"></a></div>
+          <div class="share-button">
+            <div data-href="http://framework7.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" class="fb-like"></div>
+          </div>
+          <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button"></a></div>
+          <div class="share-button"><a href="https://twitter.com/idangerous" data-show-count="true" class="twitter-follow-button"></a></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="//cdn.framework7.io/i/gh-logo.png"></a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-stars"><span></span> stars</a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-forks"><span></span> forks</a></div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="center">
+        <div class="links">
+          <div class="links-block">
+            <div class="links-block-title">Project</div>
+            <ul>
+              <li><a href="https://github.com/nolimits4web/Framework7/releases" target="_blank">Download</a></li>
+              <li><a href="/contribute/">Contribute</a></li>
+              <li><a href="/donate/">Donate</a></li>
+              <li><a href="https://github.com/nolimits4web/Framework7/blob/master/CHANGELOG.md" target="_blank">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <div class="links-block-title">Learn</div>
+            <ul>
+              <li><a href="/get-started/">Get Started</a></li>
+              <li><a href="/docs/">Docs</a></li>
+              <li><a href="/tutorials/">Tutorials</a></li>
+              <li><a href="http://forum.framework7.io" target="_blank">Forum</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <div class="links-block-title">Apps</div>
+            <ul>
+              <li><a href="/examples/">Layouts</a></li>
+              <li><a href="/plugins/">Plugins</a></li>
+              <li><a href="/apps/">Demo Apps</a></li>
+              <li><a href="/showcase/">Showcase</a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="sponsors">
+          <div class="sponsors-title">Sponsored by</div>
+          <div id="bsap_1306028" class="bsarocks bsap_692e54a1f79f00fb913f5a1c3ec9eaa5"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="copy">
+          <div class="copy-left">
+            <p>Code licensed under <a href="https://github.com/nolimits4web/Framework7/blob/master/LICENSE" target="_blank">MIT</a></p>
+            <p>2016 © Framework7 is brought to you by <a href="https://twitter.com/nolimits4web" target="_blank">Vladimir Kharlampidi</a> from <a href="http://idangero.us">iDangero.us</a>. </p>
+          </div>
+          <div class="copy-right">
+            <p>Proudly supported by <a href="https://www.keycdn.com/" class="keycdn-link" target="_blank"><img src="//cdn.framework7.io/i/keycdn-logo.svg" alt="KeyCDN" title="KeyCDN" class="keycdn-logo"></a></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </footer>
+    <script src="//cdn.framework7.io/js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="//cdn.framework7.io/js/plugins.js"></script>
+    <script src="//cdn.framework7.io/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

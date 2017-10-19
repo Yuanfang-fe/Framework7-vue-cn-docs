@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Starter App Templates | Framework7 Vue Documentation</title>
+    <meta property="og:image" content="http://framework7.io/i/f7-banner.jpg">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/normalize.css">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/highlight.css">
+    <link rel="stylesheet" href="//cdn.framework7.io/css/main.css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="//cdn.framework7.io/js/vendor/modernizr-2.7.1.min.js"></script>
+  </head>
+  <body><!-- BuySellAds Ad Code -->
+    <script>
+      (function(){
+        var bsa = document.createElement('script');
+           bsa.type = 'text/javascript';
+           bsa.async = true;
+           bsa.src = '//s3.buysellads.com/ac/bsa.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+      })();
+    </script><!-- End BuySellAds Ad Code -->
+    <header class="inner-header">
+      <div class="center"><a href="../" class="logo"></a>
+        <div class="langs"><span>Language: </span><a href="http://framework7.io">EN</a><a href="http://framework7.cn/">CN</a></div>
+        <div class="carbon"><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=framework7io" id="_carbonads_js"></script></div>
+        <div class="title-links">
+          <div class="title">Framework7</div>
+          <div class="links-row">
+            <div class="links-label">Project:</div>
+            <div class="links"><a href="https://github.com/nolimits4web/Framework7/releases" target="_blank">Download</a><a href="http://forum.framework7.io">Forum</a><a href="../contribute/">Contribute</a><a href="https://github.com/nolimits4web/Framework7/blob/master/CHANGELOG.md" target="_blank">Changelog</a>
+            </div>
+          </div>
+          <div class="links-row">
+            <div class="links-label">Learn:</div>
+            <div class="links"><a href="../docs/">Docs</a><a href="../vue/" class="active">F7 + Vue</a><a href="../react/">F7 +  React</a><a href="../tutorials/">Tutorials</a>
+            </div>
+          </div>
+          <div class="links-row">
+            <div class="links-label">Apps:</div>
+            <div class="links"><a href="../examples/">Layouts</a><a href="../plugins/">Plugins</a><a href="../apps/">Demo Apps</a><a href="../showcase/">Showcase</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="share-line">
+      <div class="center">
+        <div class="share-buttons">
+          <div class="share-button"><a href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><img src="//cdn.framework7.io/i/support-badge.png" style="height:20px"></a></div>
+          <div class="share-button">
+            <div data-href="http://framework7.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" class="fb-like"></div>
+          </div>
+          <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button"></a></div>
+          <div class="share-button"><a href="https://twitter.com/idangerous" data-show-count="true" class="twitter-follow-button"></a></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="//cdn.framework7.io/i/gh-logo.png"></a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-stars"><span></span> stars</a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-forks"><span></span> forks</a></div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="content center">
+      <div class="docs-wrap">
+        <div class="docs-nav">
+          <ul>
+            <li>
+              <div class="title">开始使用</div>
+              <ul>
+                <li><a href="introduction.html">简介</a></li>
+                <li><a href="installation.html">如何安装</a></li>
+                <li><a href="templates.html">框架模板</a></li>
+                <li><a href="app-layout.html">App 布局</a></li>
+                <li><a href="init-app.html">初始化 App</a></li>
+                <li><a href="navigation-router.html">导航 / 路由器</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="title">Vue 组件</div>
+              <ul>
+                <li><a href="accordion.html">手风琴</a></li>
+                <li><a href="badge.html">Badge</a></li>
+                <li><a href="content-block-title.html">Block Title</a></li>
+                <li><a href="content-block.html">Block / Content Block</a></li>
+                <li><a href="button.html">按钮</a></li>
+                <li><a href="card.html">卡片</a></li>
+                <li><a href="chips.html">Chips / Tags</a></li>
+                <li><a href="fab.html">Floating Action Button</a></li>
+                <li>
+                  <div class="subtitle">表单</div>
+                  <ul>
+                    <li><a href="checkboxes-radios.html">复选框 & 单选框</a></li>
+                    <li><a href="form-elements.html">表单元素</a></li>
+                    <li><a href="smart-select.html">Smart Select</a></li>
+                  </ul>
+                </li>
+                <li><a href="icon.html">图标</a></li>
+                <li><a href="grid.html">Grid / Layout Grid</a></li>
+                <li>
+                  <div class="subtitle">列表</div>
+                  <ul>
+                    <li><a href="list.html">列表</a></li>
+                    <li><a href="list-item.html">列表项</a></li>
+                    <li><a href="list-button.html">列表按钮</a></li>
+                    <li><a href="accordion-list.html">手风琴列表</a></li>
+                    <li><a href="contacts-list.html">联系人列表</a></li>
+                    <li><a href="sortable-list.html">可排序列表</a></li>
+                    <li><a href="swipeout-list.html">滑动操作列表</a></li>
+                    <li><a href="virtual-list.html">虚拟列表</a></li>
+                  </ul>
+                </li>
+                <li><a href="link.html">链接</a></li>
+                <li><a href="messages.html">消息</a></li>
+                <li><a href="messagebar.html">消息提示</a></li>
+                <li>
+                  <div class="subtitle">模态框</div>
+                  <ul>
+                    <li><a href="action-sheet.html">Action Sheet</a></li>
+                    <li><a href="login-screen.html">登录框</a></li>
+                    <li><a href="picker-modal.html">选择模态框</a></li>
+                    <li><a href="popover.html">Popover</a></li>
+                    <li><a href="popup.html">弹出框</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="subtitle">导航条</div>
+                  <ul>
+                    <li><a href="navbar.html">导航</a></li>
+                    <li><a href="toolbar.html">工具条/页签条</a></li>
+                    <li><a href="subnavbar.html">二级导航</a></li>
+                  </ul>
+                </li>
+                <li><a href="pages.html">页面容器</a></li>
+                <li><a href="page.html">页面</a></li>
+                <li><a href="panel.html">页面容器</a></li>
+                <li><a href="photo-browser.html">图片浏览器</a></li>
+                <li><a href="preloader.html">Preloader / Spinner</a></li>
+                <li><a href="progressbar.html">进度条</a></li>
+                <li><a href="searchbar.html">搜索框</a></li>
+                <li><a href="statusbar.html">状态栏</a></li>
+                <li><a href="swiper.html">Swiper</a></li>
+                <li><a href="tabs.html">页签</a></li>
+                <li><a href="template7-template.html">Template7 模板</a></li>
+                <li><a href="timeline.html">时间线</a></li>
+                <li><a href="views.html">视图容器</a></li>
+                <li><a href="view.html">视图</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="toggle-docs-nav"><span></span></div>
+        </div>
+        <div class="docs-content">
+          <h1>入门应用模板</h1>
+          <p>有三个准备好的模板，使用Framework7和Vue来启动您的app开发。</p>
+          <h2>Framework7 Vue简单模板</h2>
+          <p>这是没有任何构建器和开发服务器的最简单的静态模板。它在单个HTML文件中提供设置</p>
+          <p>此模板针对希望开始探索Framework7 + Vue的初学者，而不会被复杂的开发环境所干扰。</p>
+          <p>对于高级功能（如asset编译，hot-reload和CSS提取），我们建议经验丰富的开发人员使用其他的模板：Framework7 Vue Webpack Template或Framework7 Vue Browserify Template。</p>
+          <p>从<a href="https://github.com/nolimits4web/Framework7-Vue-Simple-Template" target="_blank">GitHub仓库</a>下载模板或者使用</p>
+          <pre><code class="bash">$ git clone https://github.com/nolimits4web/Framework7-Vue-Simple-Template my-app</code></pre>
+          <h2>Framework7 Vue Webpack App Template</h2>
+          <p>这是最强大的模板，包括全功能的Framework7 + Vue + Webpack设置与热加载，单文件组件（.vue）支持＆css提取。</p>
+          <h4>安装</h4>
+          <p>从<a href="https://github.com/nolimits4web/Framework7-Vue-Webpack-Template" target="_blank">GitHub仓库</a>下载模板或者</p>
+          <pre><code class="bash">$ git clone https://github.com/nolimits4web/Framework7-Vue-Webpack-Template my-app</code></pre>
+          <p>到下载项目文件夹的目录下安装依赖项：</p>
+          <pre><code class="bash">$ npm install</code></pre>
+          <h4>运行开发环境</h4>
+          <pre><code class="bash">$ npm run dev</code></pre>
+          <p>App使用热加载，并在<code>localhost:8080</code>运行服务。</p>
+          <h4>生产构建</h4>
+          <p>当你的app编写好了，你需要 build it for production:</p>
+          <pre><code class="bash">$ npm run build</code></pre>
+          <h4>项目结构</h4>
+          <ul>
+            <li><b>src/assets</b> - 静态资源的文件夹 (images)</li>
+            <li><b>src/components</b> - 自定义.vue组件文件夹</li>
+            <li><b>src/css</b> - app自定义的CSS样式。 不要忘记在main.js中import他们</li>
+            <li><b>src/pages</b> - app .vue页面</li>
+            <li><b>src/main</b>.js - main app file where you include/import all required libs and init app</li>
+            <li><b>src/routes</b>.js - app routes</li>
+            <li><b>src/app</b>.vue - main app structure/component
+              <h2>Framework7 Vue Browserify App Template</h2>
+              <p>另一个强大的模板，其中包括Framework7 + Vue + Browserify 通过 hot-reload建立, 支持单文件组件(.vue) & css 提取.</p>
+              <h4>Install</h4>
+              <p>从它的<a href="https://github.com/nolimits4web/Framework7-Vue-Browserify-Template" target="_blank">GitHub repository</a> 下载模板或者</p>
+              <pre><code class="bash">$ git clone https://github.com/nolimits4web/Framework7-Vue-Browserify-Template my-app</code></pre>
+              <p>转到下载的项目文件夹并安装依赖关系:</p>
+              <pre><code class="bash">$ npm install</code></pre>
+              <h4>运行开发环境</h4>
+              <pre><code class="bash">$ npm run dev</code></pre>
+              <p>App将以热加载运行服务器 <code>localhost:8080</code></p>
+              <h4>Build for production</h4>
+              <p>当您的app准备就绪时，您需要构建它 for production:</p>
+              <pre><code class="bash">$ npm run build</code></pre>
+              <h4>Project 结构</h4>
+              <ul>
+                <li><b>src/components</b> - 文件夹与自定义.vue组件</li>
+                <li><b>src/pages</b> - app .vue pages</li>
+                <li><b>src/main.js</b> - app主文件，include/import所有必需的libs, 并且init app</li>
+                <li><b>src/routes.js</b> - app 路由</li>
+                <li><b>src/app.vue</b> - main app structure/component</li>
+                <li><b>dist/css</b> - app styles, app自定义CSS styles放在这里</li>
+                <li><b>dist/css/build.css</b> - Vue组件styles将通过<code>npm run build</code>提取到这里</li>
+              </ul>
+              <h2>Framework7 Vue Webpack Cordova App Template</h2>
+              <p>这个template包含full-featured Framework7 + Vue + Webpack， setup with hot-reload, single file components (.vue) support & css 提取 with super cordova support.</p>
+              <h4>Install</h4>
+              <p>You can read instructions from its <a href="https://github.com/centrual/cordova-template-framework7-vue-webpack" target="_blank">GitHub repository</a> you can continue reading.</p>
+              <p>This template needs Node Js and Npm. You can find install instructions from <a href="https://nodejs.org/en/" target="_blank">Node Js home page</a>.</p>
+              <p>If you don't have cordova or phonegap please install it with:</p>
+              <pre><code class="bash">$ npm i cordova -g
+or
+$ npm i phonegap -g</code></pre>
+              <p>Now you have NodeJs and Cordova-PhoneGap You can create a project with this template now:</p>
+              <pre><code class="bash">$ cordova create &lt;project_create_dir&gt; [com.example.projectname] [ProjectClassName] --template cordova-template-framework7-vue-webpack
+or
+$ phonegap create &lt;project_create_dir&gt; [com.example.projectname] [ProjectClassName] --template cordova-template-framework7-vue-webpack</code></pre>
+              <h4>Run Your Code</h4>
+              <p>You can run every cordova-phonegap commands. You have one argument for development: -- --live-reload or -- --lr.</p>
+              <p>You can find cordova cli reference from <a href="https://cordova.apache.org/docs/en/latest/reference/cordova-cli/" target="_blank">Cordova Docs</a> or phonegap cli reference from: <a href="http://docs.phonegap.com/getting-started/1-install-phonegap/cli/" target="_blank">Phonegap Docs</a></p>
+              <p>Sample Commands:</p>
+              <pre><code class="bash">$ cordova (run|emulate) [android|ios|browser] [-- --lr]
+or
+$ phonegap (run|emulate) [android|ios|browser] [-- --lr]</code></pre>
+              <h4>Build for production</h4>
+              <p>When your app is ready you need to build it for production:</p>
+              <pre><code class="bash">$ cordova build --release
+or
+$ phonegap build --release</code></pre>
+              <p>For more information about build: <a href="https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html" target="_blank">Cordova Android Platform Guide</a></p>
+              <h4>Project Structure</h4>
+              <ul>
+                <li><b>src</b> - Source files are here. Mostly your target is this directory.</li>
+                <li><b>src/assets/static</b> - Your static assets like images, css, fonts, json, js, sass is here.</li>
+                <li><b>src/assets/static/css</b> - put custom app CSS styles here. Don't forget to import them in main.js</li>
+                <li><b>src/assets/vue/pages</b> - app .vue pages</li>
+                <li><b>src/assets/vue/components</b> - folder with custom .vue components</li>
+                <li><b>src/main.js</b> - main app file where you include/import all required libs and init app</li>
+                <li><b>src/routes.js</b> - app routes</li>
+                <li><b>src/main.vue</b> - main app structure/component</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>App Framework
+        <p><b>iOS and Android Apps with HTML & JavaScript - develop, build and deploy - free and open source!</b></p><img src="https://raw.githubusercontent.com/scriptPilot/app-framework/master/media/process.png">
+        <p><b>With App Framework, you could spend your time for your next amazing App and not for the tricky stuff around!</b></p>
+        <h3>Features</h3>
+        <h4>Setup your project:</h4>
+        <ul>
+          <li>Creation of a lightweight and well-organized project folder, ready to publish on GitHub</li>
+        </ul>
+        <h4>Design your application:</h4>
+        <ul>
+          <li>Printable template to design your application with paper and pencil</li>
+          <li>Templates for your icon design - as PDF for sketching and PPTX for drawing</li>
+        </ul>
+        <h4>Develop your application:</h4>
+        <ul>
+          <li>Realize beautiful user interfaces with all well-known components and transitions, based on Framework7</li>
+          <li>Easy to maintain single file components with reusable UI elements, based on Vue.js</li>
+          <li>One code base for all devices with HTML, CSS and JavaScript - realized with Cordova, supporting ES2015</li>
+          <li>Comprehensive icon fonts like FontAwesome, Framework7, Ion and Material Icons out of the box</li>
+          <li>Well prepared to use Firebase authentication, realtime database and storage services</li>
+          <li>State kept for history, tabs, scroll positions, focus, panels, modals, form inputs and page component data</li>
+          <li>Global data object to use the same data and setting across your whole application</li>
+          <li>Flexible routing with dynamic, nesting and login protection</li>
+          <li>Offline capability and multi-language support out of the box</li>
+        </ul>
+        <h4>Test your application:</h4>
+        <ul>
+          <li>Integrated code check for correctness and automatic fix for standard conformity</li>
+          <li>Local development server with live reload, perfectly to use together with Chrome DevTools</li>
+          <li>Test your application on any iOS or Android device with an emulator or on your own device</li>
+          <li>Use a development Firebase project with automatic database and storage rule update</li>
+        </ul>
+        <h4>Build your application:</h4>
+        <ul>
+          <li>Build process with version bump and compression of all HTML, CSS, JavaScript and image files</li>
+          <li>Generation of favicons, touch icons and splash screens out of a single image file</li>
+          <li>Phone frame around your application on big screens, so you can offer desktop access with charm</li>
+          <li>Automatic build as web application, to be used online and offline in the browser</li>
+          <li>Automatic Apple Xcode project build with Cordova</li>
+          <li>Automatic Android Studio project build with Cordova</li>
+        </ul>
+        <h4>Deploy your application:</h4>
+        <ul>
+          <li>Deployment without downtime
+            <ul>
+              <li>to any FTP server as Web App</li>
+              <li>to the Firebase Hosting service as Web App</li>
+              <li>to the Apple App Store as native iOS App</li>
+              <li>to the Google Play Store as native Android App</li>
+            </ul>
+          </li>
+          <li>Easy rollback solutions</li>
+        </ul>
+        <h4>Backup your project:</h4>
+        <ul>
+          <li>Download the Firebase database content and user list to local JSON files</li>
+          <li>Snapshot creation of all important project files to backup on any external drive or cloud service</li>
+        </ul>
+        <p></p>
+        <h3>Demo App</h3>
+        <p>
+          <a href="https://itunes.apple.com/us/app/app-framework-demo/id1203927581?mt=8'" target="_blank"><img src="https://raw.githubusercontent.com/scriptPilot/app-framework/master/media/app-store-download.png"></a>
+          &nbsp;&nbsp;&nbsp;
+          <a href="https://play.google.com/store/apps/details?id=de.scriptpilot.appframework" target="_blank"><img src="https://raw.githubusercontent.com/scriptPilot/app-framework/master/media/google-play-download.png"></a>
+          &nbsp;&nbsp;&nbsp;
+          <a href="https://demo.app-framework.com/" target="_blank"><img src="https://raw.githubusercontent.com/scriptPilot/app-framework/master/media/web-app-visit.png"></a>
+        </p>
+        <h3>Get started</h3>
+        <p><a href="https://github.com/scriptPilot/app-framework/blob/master/DOCUMENTATION.md" target="_blank"><img src="https://raw.githubusercontent.com/scriptPilot/app-framework/master/media/documentation.png" /></a></p>
+      </h2>
+    </div>
+    <div class="share-line">
+      <div class="center">
+        <div class="share-buttons">
+          <div class="share-button"><a href="https://www.patreon.com/vladimirkharlampidi" target="_blank"><img src="//cdn.framework7.io/i/support-badge.png" style="height:20px"></a></div>
+          <div class="share-button">
+            <div data-href="http://framework7.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" class="fb-like"></div>
+          </div>
+          <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button"></a></div>
+          <div class="share-button"><a href="https://twitter.com/idangerous" data-show-count="true" class="twitter-follow-button"></a></div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="github-buttons"><a href="https://github.com/nolimits4web/framework7/" target="_blank"><img src="//cdn.framework7.io/i/gh-logo.png"></a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-stars"><span></span> stars</a><a href="https://github.com/nolimits4web/framework7/" target="_blank" class="gh-forks"><span></span> forks</a></div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="center">
+        <div class="links">
+          <div class="links-block">
+            <div class="links-block-title">Project</div>
+            <ul>
+              <li><a href="https://github.com/nolimits4web/Framework7/releases" target="_blank">Download</a></li>
+              <li><a href="/contribute/">Contribute</a></li>
+              <li><a href="/donate/">Donate</a></li>
+              <li><a href="https://github.com/nolimits4web/Framework7/blob/master/CHANGELOG.md" target="_blank">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <div class="links-block-title">Learn</div>
+            <ul>
+              <li><a href="/get-started/">Get Started</a></li>
+              <li><a href="/docs/">Docs</a></li>
+              <li><a href="/tutorials/">Tutorials</a></li>
+              <li><a href="http://forum.framework7.io" target="_blank">Forum</a></li>
+            </ul>
+          </div>
+          <div class="links-block">
+            <div class="links-block-title">Apps</div>
+            <ul>
+              <li><a href="/examples/">Layouts</a></li>
+              <li><a href="/plugins/">Plugins</a></li>
+              <li><a href="/apps/">Demo Apps</a></li>
+              <li><a href="/showcase/">Showcase</a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="sponsors">
+          <div class="sponsors-title">Sponsored by</div>
+          <div id="bsap_1306028" class="bsarocks bsap_692e54a1f79f00fb913f5a1c3ec9eaa5"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="copy">
+          <div class="copy-left">
+            <p>Code licensed under <a href="https://github.com/nolimits4web/Framework7/blob/master/LICENSE" target="_blank">MIT</a></p>
+            <p>2016 © Framework7 is brought to you by <a href="https://twitter.com/nolimits4web" target="_blank">Vladimir Kharlampidi</a> from <a href="http://idangero.us">iDangero.us</a>. </p>
+          </div>
+          <div class="copy-right">
+            <p>Proudly supported by <a href="https://www.keycdn.com/" class="keycdn-link" target="_blank"><img src="//cdn.framework7.io/i/keycdn-logo.svg" alt="KeyCDN" title="KeyCDN" class="keycdn-logo"></a></p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </footer>
+    <script src="//cdn.framework7.io/js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="//cdn.framework7.io/js/plugins.js"></script>
+    <script src="//cdn.framework7.io/js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74282934-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
